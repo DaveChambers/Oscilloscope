@@ -9,13 +9,13 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "PluginProcessor.h"
-#include "OscilloscopeComponent.h"
-#include "UntriggeredOscilloscope.h"
-#include "TriggeredOscilloscope.h"
-#include "ControlSection.h"
+#include "../PluginProcessor.h"
+#include "../GUI/Oscilloscopes/OscilloscopeComponent.h"
+#include "../GUI/Oscilloscopes/UntriggeredOscilloscope.h"
+#include "../GUI/Oscilloscopes/TriggeredOscilloscope.h"
+#include "../GUI/Controls/ControlSection.h"
 #include "GuiTransformer.h"
-#include "TriggerListener.h"
+#include "../GUI/Oscilloscopes/TriggerListener.h"
 
 //==============================================================================
 /**

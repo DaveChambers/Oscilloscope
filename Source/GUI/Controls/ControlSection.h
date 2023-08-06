@@ -11,8 +11,8 @@
 #pragma once
 
 #include <JuceHeader.h>
-#include "ColorPalette.h"
-#include "InitVariables.h"
+#include "../ColorPalette.h"
+#include "../../InitVariables.h"
 #include "BasicControls.h"
 #include "ProControls.h"
 

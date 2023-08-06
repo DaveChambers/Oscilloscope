@@ -10,9 +10,9 @@
  */
 
 #pragma once
-#include "InitVariables.h"
+#include "../InitVariables.h"
 #include <JuceHeader.h>
-#include "PluginProcessor.h"
+#include "../PluginProcessor.h"
 
 /**
  * Class to handle GUI transition between Pro and

@@ -7,7 +7,7 @@
 */
 
 #include "PluginProcessor.h"
-#include <PluginEditor.h>
+#include "GUI/PluginEditor.h"
 
 //==============================================================================
 OscilloscopeAudioProcessor::OscilloscopeAudioProcessor()
