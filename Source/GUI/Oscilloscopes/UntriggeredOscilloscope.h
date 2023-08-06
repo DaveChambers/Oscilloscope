@@ -11,7 +11,7 @@
 #pragma once
 #include <JuceHeader.h>
 #include "OscilloscopeComponent.h"
-#include "ColorPalette.h"
+#include "../../GUI/ColorPalette.h"
 
 /**
  * Untriggered oscilloscope. Displays data continuously updating with no control

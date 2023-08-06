@@ -10,8 +10,8 @@
 
 #include <JuceHeader.h>
 #include "InitVariables.h"
-#include "ScopeDataCollector.h"
-#include "AudioBufferQueue.h"
+#include "Buffers/ScopeDataCollector.h"
+#include "Buffers/AudioBufferQueue.h"
 
 //==============================================================================
 /**

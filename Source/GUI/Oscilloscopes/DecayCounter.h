@@ -10,7 +10,7 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "InitVariables.h"
+#include ".././../InitVariables.h"
 
 /**
  * Class keeping track of decay time of the Oscilloscope

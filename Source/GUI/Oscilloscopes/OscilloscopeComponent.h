@@ -12,7 +12,7 @@
 #include <JuceHeader.h>
 #include "../../Buffers/AudioBufferQueue.h"
 #include "../../PluginProcessor.h"
-#include "InitVariables.h"
+#include "../../InitVariables.h"
 
 /**
  * Oscilloscope graphical component.

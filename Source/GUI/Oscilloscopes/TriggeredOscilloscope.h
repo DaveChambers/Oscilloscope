@@ -11,8 +11,8 @@
 #pragma once
 #include "OscilloscopeComponent.h"
 #include "DecayCounter.h"
-#include "InitVariables.h"
-#include "ColorPalette.h"
+#include "../../InitVariables.h"
+#include "../../GUI/ColorPalette.h"
 #include "SampleFinder.h"
 
 class TriggeredOscilloscope : public OscilloscopeComponent
