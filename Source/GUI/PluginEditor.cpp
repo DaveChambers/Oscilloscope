@@ -27,11 +27,11 @@ OscilloscopeAudioProcessorEditor::OscilloscopeAudioProcessorEditor(OscilloscopeA
   // reset oscilloscopeComponent and guiTransformer pointers
   if (audioProcessor.getTreeState()->getParameterAsValue("isProfessional").getValue())
   {
-    oscilloscopeComponent.reset(new TriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
+    // oscilloscopeComponent.reset(new TriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
   }
   else
   {
-    oscilloscopeComponent.reset(new UntriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
+    // oscilloscopeComponent.reset(new UntriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
   }
 
   guiTransformer.reset(new GuiTransformer(
@@ -51,26 +51,26 @@ OscilloscopeAudioProcessorEditor::OscilloscopeAudioProcessorEditor(OscilloscopeA
       { this->contractionEndedCallback(); }));
 
   // reset triggerListener
-  triggerListener.reset(
-      new TriggerListener(
-          // callback to reset to triggered state
-          [this]()
-          {
-            removeChildComponent(oscilloscopeComponent.get());
-            oscilloscopeComponent.reset(
-                new TriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
-            addAndMakeVisible(oscilloscopeComponent.get());
-            resized();
-          },
-          // callback to reset to untriggered state
-          [this]()
-          {
-            removeChildComponent(oscilloscopeComponent.get());
-            oscilloscopeComponent.reset(
-                new UntriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
-            addAndMakeVisible(oscilloscopeComponent.get());
-            resized();
-          }));
+//  triggerListener.reset(
+//      new TriggerListener(
+//          // callback to reset to triggered state
+//          [this]()
+//          {
+//            removeChildComponent(oscilloscopeComponent.get());
+//            oscilloscopeComponent.reset(
+//                new TriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
+//            addAndMakeVisible(oscilloscopeComponent.get());
+//            resized();
+//          },
+//          // callback to reset to untriggered state
+//          [this]()
+//          {
+//            removeChildComponent(oscilloscopeComponent.get());
+//            oscilloscopeComponent.reset(
+//                new UntriggeredOscilloscope(audioProcessor, audioProcessor.getSampleRate()));
+//            addAndMakeVisible(oscilloscopeComponent.get());
+//            resized();
+//          }));
   audioProcessor.getTreeState()->addParameterListener("isTriggered", triggerListener.get());
 
   // add and make visible components
@@ -78,7 +78,7 @@ OscilloscopeAudioProcessorEditor::OscilloscopeAudioProcessorEditor(OscilloscopeA
   addAndMakeVisible(controlSection);
 
   // set editor size
-  setSize(audioProcessor.getEditorWidth(), audioProcessor.getEditorHeight());
+  // setSize(audioProcessor.getEditorWidth(), audioProcessor.getEditorHeight());
 
   // set control section attachments
   std::vector<juce::String> attachmentNames;
@@ -95,8 +95,8 @@ OscilloscopeAudioProcessorEditor::OscilloscopeAudioProcessorEditor(OscilloscopeA
   controlSection.setMultipleAttachments(attachmentNames, *audioProcessor.getTreeState());
 
   // set resize options
-  setResizable(true, true);
-  setResizeLimits(256, 256, 1920, 1080);
+//  setResizable(true, true);
+//  setResizeLimits(256, 256, 1920, 1080);
 }
 
 OscilloscopeAudioProcessorEditor::~OscilloscopeAudioProcessorEditor()
@@ -111,20 +111,20 @@ void OscilloscopeAudioProcessorEditor::paint(juce::Graphics &g)
 void OscilloscopeAudioProcessorEditor::resized()
 {
 
-  // get bounds
-  auto area = getLocalBounds();
-  int height = area.getHeight();
-  int width = area.getWidth();
-  int margin = int(float(area.getHeight()) * margin_multiplier);
-
-  // resize components
-  oscilloscopeComponent->setTopLeftPosition(0, 0);
-  oscilloscopeComponent->setSize(area.getWidth(), margin);
-  controlSection.setTopLeftPosition(0, margin);
-  controlSection.setSize(width, height - margin);
-
-  // store new size
-  audioProcessor.storeEditorSize(getWidth(), getHeight());
+//  // get bounds
+//  auto area = getLocalBounds();
+//  int height = area.getHeight();
+//  int width = area.getWidth();
+//  int margin = int(float(area.getHeight()) * margin_multiplier);
+//
+//  // resize components
+//  oscilloscopeComponent->setTopLeftPosition(0, 0);
+//  oscilloscopeComponent->setSize(area.getWidth(), margin);
+//  controlSection.setTopLeftPosition(0, margin);
+//  controlSection.setSize(width, height - margin);
+//
+//  // store new size
+//  audioProcessor.storeEditorSize(getWidth(), getHeight());
 }
 
 void OscilloscopeAudioProcessorEditor::expandCallback()
