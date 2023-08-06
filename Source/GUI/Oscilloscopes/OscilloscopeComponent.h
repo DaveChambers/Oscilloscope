@@ -10,8 +10,8 @@
 
 #pragma once
 #include <JuceHeader.h>
-#include "AudioBufferQueue.h"
-#include "PluginProcessor.h"
+#include "../../Buffers/AudioBufferQueue.h"
+#include "../../PluginProcessor.h"
 #include "InitVariables.h"
 
 /**
